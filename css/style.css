@@ -1,0 +1,314 @@
+/* stylesheet */
+
+body {
+    font-family: "Helvetica Neue";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    color: #000;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.calculator {
+    width: 100vw;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+}
+
+.results-wrapper {
+    display: flex;
+    position: relative;
+    padding: 20px;
+    border-bottom: 1px solid black;
+}
+
+.screen {
+	display: flex;
+	justify-content: center;
+	height: 18px;
+	width: 100%;
+}
+
+.stop-save {
+	color: grey;
+	pointer-events: none;
+}
+
+.active {
+	z-index: 100;
+	background-color: #FFF;
+}
+
+.keys-saved-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+.keys-wrapper {
+    display: flex;
+    flex-direction: row;
+    width: 75%;
+}
+
+.saved-wrapper {
+    width: 25%;
+    border-left: 1px solid black;
+    height: 194px;
+    overflow: scroll;
+}
+
+.keys {
+    width: 80%;
+}
+
+.row {
+    display: flex;
+}
+
+.save-cancel {
+    display: flex;
+    flex-direction: row;
+    width: 66.66%;
+}
+
+.save-cancel .button:first-child {
+    border-left: 1px solid black;
+}
+
+.save-cancel .button:last-child {
+    border-left: 1px solid black;
+}
+
+.row-three .button:nth-child(1) {
+    border-right: 1px solid transparent;
+}
+
+.row-three .button:nth-child(2) {
+    border-right: 1px solid transparent;
+    border-bottom: 1px solid black;
+}
+
+.row-three .button:nth-child(3) {
+    border-bottom: 1px solid black;
+}
+
+.row>.button {
+    border-bottom: 1px solid white;
+}
+
+.nought-decimal {
+    display: flex;
+    flex-direction: column;
+    width: 33.33%;
+}
+
+.nought-decimal .button:first-child {
+    border-bottom: 1px solid white;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+.button:hover {
+    background-color: gray;
+    color: white;
+    cursor: pointer;
+}
+
+.operators {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    border-left: 1px solid black;
+}
+
+.operators .button {
+    border-bottom: 1px solid black
+}
+
+.operators .button:last-child {
+    border-bottom: none;
+}
+
+.name-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    border-bottom: 1px solid black;
+}
+
+.saved-items {
+    display: flex;
+    flex-direction: column;
+}
+
+.saved-maths {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    padding: 2px 5px;
+}
+
+.saved-maths span {
+	font-size: 10px;
+	display: flex;
+}
+
+.name-date {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+}
+
+.delete-button {
+    display: flex;
+    margin-left: auto;
+    padding: 5px 5px;
+}
+
+.delete-button:hover {
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+}
+
+.maths-name {
+    display: flex;
+    width: 100%;
+    padding: 5px 0;
+}
+
+.maths-name:hover {
+    background-color: gray;
+    color: #FFF;
+    cursor: pointer;
+}
+
+.non-mobile {
+    display: flex;
+}
+
+.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 750px) {
+
+	.calculator {
+		height: auto;
+	}
+
+    .keys-saved-wrapper {
+        flex-direction: column;
+    }
+
+    .keys-wrapper {
+        width: 100%;
+    }
+
+    .saved-wrapper {
+    	height: auto;
+        width: 100%;
+        border-top: 1px solid black;
+        border-left: none;
+        overflow: auto;
+    }
+}
+
+@media screen and (max-width: 450px) {
+
+    .mobile {
+        display: flex;
+    }
+
+    .non-mobile {
+        display: none;
+    }
+
+    .keys {
+        width: 100%;
+    }
+
+    .row-three>.button {
+        border-bottom: 0;
+    }
+
+    .operators-mobile {
+        display: flex;
+        flex-direction: column;
+        width: 66.66%;
+    }
+
+    .operators-row {
+        display: flex;
+        flex-direction: row;
+        border-top: 1px solid black;
+        border-left: 1px solid black;
+    }
+
+    .operators-row .button:last-child {
+    	border-left: 1px solid black;
+    }
+
+    .row-three .button:nth-child(2) {
+        border-right: none;
+        border-bottom: none;
+    }
+
+    .row-three .button:nth-child(3) {
+        border-right: none;
+        border-bottom: none;
+    }
+
+    .nought-decimal .button {
+    	border-top: 1px solid white;
+    }
+
+    .nought-decimal .button:first-child {
+    	border-bottom: none;
+    }
+
+    .save-cancel-equal-wrapper {
+    	display: flex;
+    	flex-direction: column;
+    	border-top: 1px solid black;
+    }
+
+    .row-equal {
+    	border-bottom: 1px solid black;
+    }
+
+    .save-cancel-equal-wrapper .row .button {
+    	border-bottom: none;
+    }
+
+    .button.save {
+    	width: 66.66%;
+    	border-right: 1px solid black;
+    }
+
+    .button.cancel {
+    	width: 33.33%;
+    }
+
+}

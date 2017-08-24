@@ -1,0 +1,174 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- character encoding -->
+    <meta charset="utf-8">
+    <!-- viewport -->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- optional
+
+		<meta name="author" content="name">
+	 	<meta name="description" content="description here">
+	  	<meta name="keywords" content="keywords,here">
+
+		-->
+    <!-- title of page -->
+    <title>Calculator</title>
+    <link rel="stylesheet" href="css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!-- web fonts -->
+    <link rel="stylesheet" href="css/fonts.css" type="text/css">
+</head>
+
+<body>
+
+<div class="wrapper">
+
+<div class="calculator">
+
+	<div class="results-wrapper">
+
+		<div id="screen" data-calc="" class="screen"></div>
+
+	</div>
+
+	<div class="keys-saved-wrapper">
+
+	<div class="keys-wrapper">
+
+		<div class="keys">
+			
+			<div class="row row-one">
+				
+				<span class="button" data-type="number" data-number="7">7</span>
+				<span class="button" data-type="number" data-number="8">8</span>
+				<span class="button" data-type="number" data-number="9">9</span>
+
+			</div>
+
+			<div class="row row-two">
+				
+				<span class="button" data-type="number" data-number="4">4</span>
+				<span class="button" data-type="number" data-number="5">5</span>
+				<span class="button" data-type="number" data-number="6">6</span>
+
+			</div>
+			
+			<div class="row row-three">
+				
+				<span class="button" data-type="number" data-number="1">1</span>
+				<span class="button" data-type="number" data-number="2">2</span>
+				<span class="button" data-type="number" data-number="3">3</span>
+
+			</div>
+			
+			<div class="row row-four">
+
+				<div class="nought-decimal">
+					
+					<span class="button" data-type="number" data-number="0">0</span>
+					<span class="button" data-type="number" data-number=".">.</span>
+
+				</div>
+
+				<div class="save-cancel non-mobile">
+					
+					<span class="button stop-save save" id="save" data-type="option" data-actiontype="save">save</span>
+					<span class="button" data-type="option" data-actiontype="cancel">cancel</span>
+
+				</div>
+
+				<div class="operators-mobile mobile">
+
+					<div class="operators-row row-one">
+
+						<span class="button" data-type="operator" data-operator="+">+</span>
+						<span class="button" data-type="operator" data-operator="-">-</span>
+
+					</div>
+
+					<div class="operators-row row-one">
+
+						<span class="button" data-type="operator" data-operator="*">*</span>
+						<span class="button" data-type="operator" data-operator="/">/</span>
+
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="operators non-mobile">
+	
+			<span class="button" data-type="operator" data-operator="+">+</span>
+			<span class="button" data-type="operator" data-operator="-">-</span>
+			<span class="button" data-type="operator" data-operator="*">*</span>			
+			<span class="button" data-type="operator" data-operator="/">/</span>			
+			<span class="button" data-type="operator" data-operator="=">=</span>			
+
+		</div>
+		
+	</div>
+
+	<div class="save-cancel-equal-wrapper mobile">
+
+			<div class="row row-equal">
+				
+				<span class="button" data-type="operator" data-operator="=">=</span>
+
+			</div>
+
+			<div class="row">
+				
+				<span class="button stop-save save" id="save" data-type="option" data-actiontype="save">save</span>
+				<span class="button cancel" data-type="option" data-actiontype="cancel">cancel</span>
+
+			</div>
+			
+		</div>
+
+	<div id="saved-wrapper" class="saved-wrapper">
+
+		<div class="name-wrapper"><p>Saved Maths</p></div>
+
+		<div id="saved-calcs-wrapper">
+
+
+		</div>
+
+
+
+
+	</div>
+
+	</div>
+
+
+
+
+
+
+</div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- scripts -->
+    <script src="/js/script.js" type="text/javascript"></script>
+</body>
+
+</html>
