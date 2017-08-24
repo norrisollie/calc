@@ -31,6 +31,7 @@ function buttonPress(e) {
 
         console.log(targetType);
 
+        // get the target action type dataset
         var targetAction = e.currentTarget.dataset.actiontype;
 
         // if target is save
